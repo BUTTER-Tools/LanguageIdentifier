@@ -1,0 +1,49 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+<link href="../../content/jquery.gritter.css" rel="stylesheet" type="text/css" />
+<script src="../../Scripts/jquery.gritter.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#lnkButton').button().click(function () {
+            if ($('#txtLanguage').val().length == 0) {
+                var unique_id1 = $.gritter.add({
+                    title: 'Please enter some text!',
+                    text: 'Please enter some text to identify language of it.',
+                    sticky: true,
+                    time: '',
+                    class_name: 'my-sticky-class'
+                });
+                return;
+            }
+            $.post('/Home/Index', { text: $('#txtLanguage').val() }, function (data) {
+                $("#dialog:ui-dialog").dialog("destroy");
+                if (data.length > 0) {
+                    var unique_id2 = $.gritter.add({
+                        title: 'Language Identified..',
+                        text: 'The Language of the text entered is ' + data + '.',
+                        sticky: true,
+                        time: '',
+                        class_name: 'my-sticky-class'
+                    });
+                } else {
+                    $('#model-text').text('Cannot Find the language.');
+                    var unique_id3 = $.gritter.add({
+                        title: 'Cannot Find the language!!',
+                        text: 'NTextCat is unable to identify the language of this text. Please provide some more text to identify language.',
+                        sticky: true,
+                        time: '',
+                        class_name: 'my-sticky-class'
+                    });
+                }
+            });
+        });
+    });
+</script>
+<div>
+    <h5>
+        Enter Text to check for Language</h5>
+    <textarea id="txtLanguage" style="width: 800px; height: 400px;"></textarea>
+    <br />
+    <a href="#" id="lnkButton" style="margin-top: 15px;">Get the Language</a>
+</div>

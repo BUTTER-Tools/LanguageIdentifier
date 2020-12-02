@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>;X:\Dropbox\_UT\DEV\BUTTER\Libraries - Plugins\LanguageIdentifier\SqlServerClrIntegration\SqlServerClrIntegration.csproj</PostConversionRemoveFromScc>
+    <PostConversionAddToScc>;X:\Dropbox\_UT\DEV\BUTTER\Libraries - Plugins\LanguageIdentifier\SqlServerClrIntegration\SqlServerClrIntegration.sqlproj</PostConversionAddToScc>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Database</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>SqlServerClrIntegration</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PermissionSet>UNSAFE</PermissionSet>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <ConnectionString>
+    </ConnectionString>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>X:\Dropbox\_UT\DEV\BUTTER\Libraries - Plugins\LanguageIdentifier\Backup\SqlServerClrIntegration\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <Name>SqlServerClrIntegration</Name>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9b02918a-d108-403c-bbe8-5a9d14a37c88}</ProjectGuid>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DefaultSchema>dbo</DefaultSchema>
+    <TargetLanguage>CS</TargetLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SqlServerClrIntegration.XML</DocumentationFile>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SqlServerClrIntegration.XML</DocumentationFile>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SqlServerClrIntegration</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\StrongNameKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <ItemGroup>
+    <Reference Include="IonicZip">
+      <HintPath>obj\sqlclr\IonicZip.dll</HintPath>
+      <Private>False</Private>
+      <SubType>SQLCLR</SubType>
+    </Reference>
+    <Reference Include="IvanAkcheurov.Commons.dll">
+      <HintPath>obj\sqlclr\IvanAkcheurov.Commons.dll.dll</HintPath>
+      <Private>False</Private>
+      <SubType>SQLCLR</SubType>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NClassify.dll">
+      <HintPath>obj\sqlclr\IvanAkcheurov.NClassify.dll.dll</HintPath>
+      <Private>False</Private>
+      <SubType>SQLCLR</SubType>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib.dll">
+      <HintPath>obj\sqlclr\IvanAkcheurov.NTextCat.Lib.dll.dll</HintPath>
+      <Private>False</Private>
+      <SubType>SQLCLR</SubType>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib.Legacy.dll">
+      <HintPath>obj\sqlclr\IvanAkcheurov.NTextCat.Lib.Legacy.dll.dll</HintPath>
+      <Private>False</Private>
+      <SubType>SQLCLR</SubType>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\NTextCatLib\Properties\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="IdentifyLanguage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Deploy.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Undeploy.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Test Scripts\Test.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\LanguageModels\LanguageModels.zip">
+      <Link>LanguageModels.zip</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\StrongNameKey.snk">
+      <Link>StrongNameKey.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="PreDeployScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeployScript.sql" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(SolutionDir)LanguageModels\LanguageModels.zip" del "$(SolutionDir)LanguageModels\LanguageModels.zip"
+7z.exe a "$(SolutionDir)LanguageModels\LanguageModels.zip" "$(SolutionDir)LanguageModels\*"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
