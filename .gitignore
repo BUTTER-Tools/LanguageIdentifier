@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#I don't remember why I have these, so I'm opting to omit them from the repo just to keep it cleaner
+_Alternative Repos/
